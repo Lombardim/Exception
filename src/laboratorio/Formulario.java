@@ -13,12 +13,12 @@ import javax.swing.JOptionPane;
  */
 public class Formulario extends javax.swing.JFrame {
     Boolean sw;
-    C elC;
+    E Ex;
     /**
      * Creates new form Formulario
      */
     public Formulario() {
-        elC = new C();
+        Ex = new E();
         initComponents();
         campoT.addKeyListener(new java.awt.event.KeyAdapter() {
             @Override
@@ -121,14 +121,14 @@ public class Formulario extends javax.swing.JFrame {
         String s = "" + c;
         if (b) {
                 try {
-                    elC.comprobarNumNoLetras(isNumeric(s));
+                    Ex.comprobarNumNoLetras(isNumeric(s));
                     comprobante = 1;
                 } catch (LabException e) {
                     JOptionPane.showMessageDialog(null,"Escribiste [ " + c + " ], solo debe escribir números", "Advertencia", JOptionPane.WARNING_MESSAGE);
                 }
         }else{
             try {
-                    elC.comprobarLetrasNoNum(isNumeric(s));
+                    Ex.comprobarLetrasNoNum(isNumeric(s));
                     comprobante = 1;
                 } catch (LabException e) {
                     JOptionPane.showMessageDialog(null,"Escribiste el número [ " + c + " ], solo debe escribir letras.", "Advertencia", JOptionPane.WARNING_MESSAGE);
